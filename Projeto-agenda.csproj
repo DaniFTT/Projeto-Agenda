@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contato.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="FrAgenda.Designer.cs">
       <DependentUpon>FrAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrPesquisar.Designer.cs">
+      <DependentUpon>FrPesquisar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrAgenda.resx">
       <DependentUpon>FrAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrPesquisar.resx">
+      <DependentUpon>FrPesquisar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

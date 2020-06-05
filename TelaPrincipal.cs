@@ -17,6 +17,7 @@ namespace Projeto_agenda
             InitializeComponent();
         }
 
+
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -36,6 +37,22 @@ namespace Projeto_agenda
         {
             FrAgenda fra = new FrAgenda();
             fra.Show();
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrPesquisar frp = new FrPesquisar();
+            frp.Show();
+        }
+
+        private void lbxListaDeContatos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbxListaDeContatos_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
         }
     }
 }

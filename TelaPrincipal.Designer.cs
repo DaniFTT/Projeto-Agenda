@@ -42,7 +42,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxListaDeContatos = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -115,6 +115,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Pesquisar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // monthCalendar1
             // 
@@ -140,20 +141,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Controls.Add(this.lbxListaDeContatos);
             this.panel1.Location = new System.Drawing.Point(12, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 265);
             this.panel1.TabIndex = 7;
             // 
-            // listBox1
+            // lbxListaDeContatos
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(15, 13);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(212, 238);
-            this.listBox1.TabIndex = 8;
-            this.listBox1.Visible = false;
+            this.lbxListaDeContatos.FormattingEnabled = true;
+            this.lbxListaDeContatos.Location = new System.Drawing.Point(16, 12);
+            this.lbxListaDeContatos.Name = "lbxListaDeContatos";
+            this.lbxListaDeContatos.Size = new System.Drawing.Size(208, 238);
+            this.lbxListaDeContatos.TabIndex = 8;
+            this.lbxListaDeContatos.SelectedIndexChanged += new System.EventHandler(this.lbxListaDeContatos_SelectedIndexChanged_1);
             // 
             // TelaPrincipal
             // 
@@ -196,6 +197,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListBox listBox1;
+        public System.Windows.Forms.ListBox lbxListaDeContatos;
     }
 }
