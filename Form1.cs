@@ -42,13 +42,15 @@ namespace Projeto_agenda
 
         private void button1_Click(object sender, EventArgs e)// botão iniciar
         {
-            TelaPrincipal frl = new TelaPrincipal();
+            frmTelaPrincipal frl = new frmTelaPrincipal();
             frl.Show();
             this.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)// botão sair
         {
+            if (MessageBox.Show("Deseja realmente sair da aplicação? ", "SAIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
+
             Application.Exit();
         }
     }

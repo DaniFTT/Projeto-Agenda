@@ -2,23 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace Projeto_agenda
 {
-    class Contato
+    public class Contato
     {
+        public string nome { get; set; }
+        public string telefone { get; set; }
 
-        public string NomeContato { get; set; }
-        public string Telefone { get; set; }
-        public Contato(string nomeContato, string telefone)
-        {
-            NomeContato = nomeContato;
-            Telefone = telefone;
-        }
-        public override string ToString()
-        {
-            return NomeContato + " - " + Telefone;
-        }
+        
+        
     }
+
 }

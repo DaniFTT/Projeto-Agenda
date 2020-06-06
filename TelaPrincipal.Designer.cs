@@ -1,6 +1,6 @@
 ﻿namespace Projeto_agenda
 {
-    partial class TelaPrincipal
+    partial class frmTelaPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -35,17 +35,17 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lbxListaDeContatos = new System.Windows.Forms.ListBox();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.lblVersao = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // consultarToolStripMenuItem
@@ -97,25 +97,25 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(81, 17);
             this.toolStripStatusLabel1.Text = "Bem vindo(a)!";
             // 
-            // button1
+            // btnInserir
             // 
-            this.button1.Location = new System.Drawing.Point(12, 347);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Inserir Contatos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnInserir.Location = new System.Drawing.Point(12, 335);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(108, 23);
+            this.btnInserir.TabIndex = 2;
+            this.btnInserir.Text = "Inserir Contatos";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // button2
+            // btnPesquisar
             // 
-            this.button2.Location = new System.Drawing.Point(150, 347);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Pesquisar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPesquisar.Location = new System.Drawing.Point(152, 335);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(118, 23);
+            this.btnPesquisar.TabIndex = 3;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // monthCalendar1
             // 
@@ -138,38 +138,52 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.lbxListaDeContatos);
-            this.panel1.Location = new System.Drawing.Point(12, 55);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 265);
-            this.panel1.TabIndex = 7;
-            // 
             // lbxListaDeContatos
             // 
+            this.lbxListaDeContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxListaDeContatos.FormattingEnabled = true;
-            this.lbxListaDeContatos.Location = new System.Drawing.Point(16, 12);
+            this.lbxListaDeContatos.ItemHeight = 15;
+            this.lbxListaDeContatos.Location = new System.Drawing.Point(26, 44);
             this.lbxListaDeContatos.Name = "lbxListaDeContatos";
-            this.lbxListaDeContatos.Size = new System.Drawing.Size(208, 238);
-            this.lbxListaDeContatos.TabIndex = 8;
-            this.lbxListaDeContatos.SelectedIndexChanged += new System.EventHandler(this.lbxListaDeContatos_SelectedIndexChanged_1);
+            this.lbxListaDeContatos.Size = new System.Drawing.Size(214, 259);
+            this.lbxListaDeContatos.TabIndex = 7;
             // 
-            // TelaPrincipal
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(308, 335);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(119, 23);
+            this.btnSair.TabIndex = 8;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // lblVersao
+            // 
+            this.lblVersao.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersao.Location = new System.Drawing.Point(12, 371);
+            this.lblVersao.Name = "lblVersao";
+            this.lblVersao.Size = new System.Drawing.Size(496, 23);
+            this.lblVersao.TabIndex = 9;
+            this.lblVersao.Text = "Apresentar a versão ";
+            this.lblVersao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // frmTelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 416);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblVersao);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.lbxListaDeContatos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "TelaPrincipal";
+            this.Name = "frmTelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agenda";
             this.Load += new System.EventHandler(this.TelaPrincipal_Load);
@@ -177,7 +191,6 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,13 +203,14 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.ListBox lbxListaDeContatos;
+        private System.Windows.Forms.ListBox lbxListaDeContatos;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblVersao;
     }
 }

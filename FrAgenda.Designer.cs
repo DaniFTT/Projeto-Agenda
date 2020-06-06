@@ -29,63 +29,93 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lblRegistros = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.lista_Contatos = new System.Windows.Forms.ListBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnSair);
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.lblRegistros);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnFechar);
+            this.groupBox1.Controls.Add(this.lista_Contatos);
             this.groupBox1.Controls.Add(this.txtTelefone);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnLimpar);
             this.groupBox1.Controls.Add(this.btnSalvar);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(307, 241);
+            this.groupBox1.Size = new System.Drawing.Size(318, 320);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contato";
             // 
-            // listBox1
+            // lblRegistros
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 113);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(307, 95);
-            this.listBox1.TabIndex = 6;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lblRegistros.Location = new System.Drawing.Point(7, 294);
+            this.lblRegistros.Name = "lblRegistros";
+            this.lblRegistros.Size = new System.Drawing.Size(129, 23);
+            this.lblRegistros.TabIndex = 9;
+            this.lblRegistros.Text = "Registros: 0 ";
+            this.lblRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(7, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(129, 23);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Lista de Contatos:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Location = new System.Drawing.Point(228, 256);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(79, 27);
+            this.btnFechar.TabIndex = 7;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // lista_Contatos
+            // 
+            this.lista_Contatos.FormattingEnabled = true;
+            this.lista_Contatos.Location = new System.Drawing.Point(6, 116);
+            this.lista_Contatos.Name = "lista_Contatos";
+            this.lista_Contatos.Size = new System.Drawing.Size(301, 134);
+            this.lista_Contatos.TabIndex = 6;
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(106, 87);
+            this.txtTelefone.Location = new System.Drawing.Point(96, 62);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(195, 20);
             this.txtTelefone.TabIndex = 5;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(77, 28);
+            this.txtNome.Location = new System.Drawing.Point(77, 19);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(224, 20);
             this.txtNome.TabIndex = 4;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 85);
+            this.label2.Location = new System.Drawing.Point(6, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 3;
@@ -95,25 +125,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 26);
+            this.label1.Location = new System.Drawing.Point(11, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nome:";
             // 
-            // btnCancelar
+            // btnLimpar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(106, 208);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(79, 27);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Limpar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnLimpar.Location = new System.Drawing.Point(119, 256);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(79, 27);
+            this.btnLimpar.TabIndex = 1;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(6, 208);
+            this.btnSalvar.Location = new System.Drawing.Point(6, 256);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(80, 27);
             this.btnSalvar.TabIndex = 0;
@@ -121,21 +150,11 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // btnSair
-            // 
-            this.btnSair.Location = new System.Drawing.Point(212, 208);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(79, 27);
-            this.btnSair.TabIndex = 7;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
             // FrAgenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(331, 265);
+            this.ClientSize = new System.Drawing.Size(342, 344);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrAgenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -150,13 +169,15 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.ListBox lista_Contatos;
+        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Label lblRegistros;
+        private System.Windows.Forms.Label label3;
     }
 }

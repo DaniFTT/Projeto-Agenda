@@ -12,7 +12,6 @@ namespace Projeto_agenda
 {
     public partial class FrPesquisar : Form
     {
-        private List<Contato> ListaDeContatos { get; set; }
 
         public FrPesquisar()
         {

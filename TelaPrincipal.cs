@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Projeto_agenda
 {
-    public partial class TelaPrincipal : Form
+    public partial class frmTelaPrincipal : Form
     {
-        public TelaPrincipal()
+        public frmTelaPrincipal()
         {
             InitializeComponent();
+            lblVersao.Text = ClasseGeral.versao;
+            ClasseGeral.ConstroiListaContatos();
         }
 
 
@@ -33,26 +35,23 @@ namespace Projeto_agenda
             label1.Text = DateTime.Now.ToLongTimeString() ;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnInserir_Click(object sender, EventArgs e)
         {
             FrAgenda fra = new FrAgenda();
             fra.Show();
+
         }
-
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
             FrPesquisar frp = new FrPesquisar();
             frp.Show();
         }
 
-        private void lbxListaDeContatos_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Deseja realmente sair da aplicação? ", "SAIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
 
-        }
-
-        private void lbxListaDeContatos_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
+            Application.Exit();
         }
     }
 }
