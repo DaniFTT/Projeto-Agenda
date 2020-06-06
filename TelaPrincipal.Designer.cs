@@ -41,9 +41,10 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.lbxListaDeContatos = new System.Windows.Forms.ListBox();
+            this.lbxListaDePesquisa = new System.Windows.Forms.ListBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
+            this.contatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
             this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.pesquisarToolStripMenuItem_Click);
             // 
             // ajudaaToolStripMenuItem
             // 
@@ -71,6 +73,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contatosToolStripMenuItem,
             this.pesquisarToolStripMenuItem,
             this.consultarToolStripMenuItem,
             this.ajudaaToolStripMenuItem});
@@ -99,7 +102,7 @@
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(12, 335);
+            this.btnInserir.Location = new System.Drawing.Point(19, 335);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(108, 23);
             this.btnInserir.TabIndex = 2;
@@ -109,7 +112,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(152, 335);
+            this.btnPesquisar.Location = new System.Drawing.Point(204, 335);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(118, 23);
             this.btnPesquisar.TabIndex = 3;
@@ -138,19 +141,19 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             // 
-            // lbxListaDeContatos
+            // lbxListaDePesquisa
             // 
-            this.lbxListaDeContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbxListaDeContatos.FormattingEnabled = true;
-            this.lbxListaDeContatos.ItemHeight = 15;
-            this.lbxListaDeContatos.Location = new System.Drawing.Point(26, 44);
-            this.lbxListaDeContatos.Name = "lbxListaDeContatos";
-            this.lbxListaDeContatos.Size = new System.Drawing.Size(214, 259);
-            this.lbxListaDeContatos.TabIndex = 7;
+            this.lbxListaDePesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxListaDePesquisa.FormattingEnabled = true;
+            this.lbxListaDePesquisa.ItemHeight = 15;
+            this.lbxListaDePesquisa.Location = new System.Drawing.Point(19, 41);
+            this.lbxListaDePesquisa.Name = "lbxListaDePesquisa";
+            this.lbxListaDePesquisa.Size = new System.Drawing.Size(251, 274);
+            this.lbxListaDePesquisa.TabIndex = 7;
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(308, 335);
+            this.btnSair.Location = new System.Drawing.Point(389, 335);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(119, 23);
             this.btnSair.TabIndex = 8;
@@ -168,6 +171,13 @@
             this.lblVersao.Text = "Apresentar a versão ";
             this.lblVersao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // contatosToolStripMenuItem
+            // 
+            this.contatosToolStripMenuItem.Name = "contatosToolStripMenuItem";
+            this.contatosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.contatosToolStripMenuItem.Text = "Contatos";
+            this.contatosToolStripMenuItem.Click += new System.EventHandler(this.contatosToolStripMenuItem_Click);
+            // 
             // frmTelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,7 +185,7 @@
             this.ClientSize = new System.Drawing.Size(524, 416);
             this.Controls.Add(this.lblVersao);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.lbxListaDeContatos);
+            this.Controls.Add(this.lbxListaDePesquisa);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.btnPesquisar);
@@ -186,7 +196,6 @@
             this.Name = "frmTelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agenda";
-            this.Load += new System.EventHandler(this.TelaPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -209,8 +218,9 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lbxListaDeContatos;
+        private System.Windows.Forms.ListBox lbxListaDePesquisa;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblVersao;
+        private System.Windows.Forms.ToolStripMenuItem contatosToolStripMenuItem;
     }
 }

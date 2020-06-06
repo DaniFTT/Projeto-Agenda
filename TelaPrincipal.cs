@@ -12,6 +12,8 @@ namespace Projeto_agenda
 {
     public partial class frmTelaPrincipal : Form
     {
+
+
         public frmTelaPrincipal()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace Projeto_agenda
 
         }
 
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToLongTimeString() ;
@@ -41,10 +44,15 @@ namespace Projeto_agenda
             fra.Show();
 
         }
+
+        
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             FrPesquisar frp = new FrPesquisar();
-            frp.Show();
+            frp.ShowDialog();
+  
+            
+            
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -52,6 +60,19 @@ namespace Projeto_agenda
             if (MessageBox.Show("Deseja realmente sair da aplicação? ", "SAIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
 
             Application.Exit();
+        }
+
+        private void contatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TodosContatos tdc = new TodosContatos();
+            tdc.Show();
+            this.Visible = false;
+        }
+
+        private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrPesquisar frp = new FrPesquisar();
+            frp.Show();
         }
     }
 }

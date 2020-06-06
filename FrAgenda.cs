@@ -16,7 +16,7 @@ namespace Projeto_agenda
         public FrAgenda()
         {
             InitializeComponent();
-            ConstroiLista();
+            btnLimpar.Enabled = false;
         }
 
         //=============================================================================
@@ -25,25 +25,12 @@ namespace Projeto_agenda
 
         }
 
-        //=============================================================================
-        private void ConstroiLista()
-        {
-            // adicionna a listaa de contaatos
-            lista_Contatos.Items.Clear();
-            
-            foreach(Contato contatos in ClasseGeral.ListaDeContatos)
-            {
-                lista_Contatos.Items.Add("Nome:  " + contatos.nome + " | Telefone: " + contatos.telefone);
-            }
-
-            //atuaalizar os regisstros
-
-            lblRegistros.Text = "Registros: " + lista_Contatos.Items.Count;
-        }
 
         //=============================================================================
         private void btnFechar_Click(object sender, EventArgs e)
         {
+            txtNome.Text = null;
+            txtTelefone.Text = null;
             this.Close();
         }
 
@@ -67,16 +54,12 @@ namespace Projeto_agenda
                     return;
                 }
             }
-
-
-
             // gravar no registro
 
             ClasseGeral.SalvarNovoRegistro(txtNome.Text, txtTelefone.Text);
 
             // aatualizar a listta
-
-            ConstroiLista();
+                
 
             //limpa os textsBox após digitado
 
@@ -84,6 +67,39 @@ namespace Projeto_agenda
             txtNome.Text = "";
             txtNome.Focus();
 
+            MessageBox.Show("Contato salvo!", "Salvo");
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtTelefone.Clear();
+            txtNome.Clear();
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNome.Text.Length != 0)
+            {
+                btnLimpar.Enabled = true;
+            }
+            else
+            {
+                btnLimpar.Enabled = false;
+            }
+        }
+
+        private void txtTelefone_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTelefone.Text.Length != 0)
+            {
+                btnLimpar.Enabled = true;
+            }
+            else
+            {
+                btnLimpar.Enabled = false;
+            }
         }
 
         //=============================================================================
