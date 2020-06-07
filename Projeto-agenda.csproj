@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Agenda.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,6 +63,18 @@
     <Compile Include="FrAgenda.Designer.cs">
       <DependentUpon>FrAgenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAjuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjuda.Designer.cs">
+      <DependentUpon>FrmAjuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrPesquisar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrAgenda.resx">
       <DependentUpon>FrAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAjuda.resx">
+      <DependentUpon>FrmAjuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrPesquisar.resx">
       <DependentUpon>FrPesquisar.cs</DependentUpon>
@@ -116,6 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Agenda.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

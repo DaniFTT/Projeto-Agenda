@@ -17,6 +17,7 @@ namespace Projeto_agenda
         {
             InitializeComponent();
             ConstroiLista();
+            lblVersao.Text = ClasseGeral.versao;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -82,6 +83,9 @@ namespace Projeto_agenda
             ConstroiLista();
         }
 
+        private void lblVersao_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

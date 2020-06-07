@@ -33,6 +33,8 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.paginaInicialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbxListaDeContatos = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -67,9 +69,11 @@
             // menuStrip1
             // 
             this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.paginaInicialToolStripMenuItem});
+            this.paginaInicialToolStripMenuItem,
+            this.sobreToolStripMenuItem,
+            this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(524, 24);
@@ -83,8 +87,21 @@
             this.paginaInicialToolStripMenuItem.Text = "Pagina Inicial";
             this.paginaInicialToolStripMenuItem.Click += new System.EventHandler(this.paginaInicialToolStripMenuItem_Click);
             // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
             // lbxListaDeContatos
             // 
+            this.lbxListaDeContatos.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lbxListaDeContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxListaDeContatos.FormattingEnabled = true;
             this.lbxListaDeContatos.ItemHeight = 15;
@@ -134,6 +151,7 @@
             this.lblVersao.TabIndex = 16;
             this.lblVersao.Text = "Apresentar a versão ";
             this.lblVersao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblVersao.Click += new System.EventHandler(this.lblVersao_Click);
             // 
             // groupBox1
             // 
@@ -168,6 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(524, 416);
             this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.lblRegistros);
@@ -205,5 +224,7 @@
         private System.Windows.Forms.Label lblRegistros;
         private System.Windows.Forms.Button btnApagar;
         public System.Windows.Forms.ListBox lbxListaDeContatos;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
     }
 }

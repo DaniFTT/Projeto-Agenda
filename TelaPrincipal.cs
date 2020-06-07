@@ -13,6 +13,7 @@ namespace Projeto_agenda
     public partial class frmTelaPrincipal : Form
     {
         string texto;
+        public List<Contato> listaDeResultados;
         //=======================================================================
         public frmTelaPrincipal()
         {
@@ -27,20 +28,18 @@ namespace Projeto_agenda
         }
         private void ExecutaPesquisa()
         {
-            List<Contato> listaDeResultados = new List<Contato>();
+            listaDeResultados = new List<Contato>();
 
             foreach(Contato contatos in ClasseGeral.ListaDeContatos)
             {
                 if(contatos.nome.ToUpper().Contains(texto) || contatos.telefone.ToUpper().Contains(texto))
                 {
                     listaDeResultados.Add(contatos);
+                    ConstroiLista();
+
                 }
             }
-            lbxListaDePesquisa.Items.Clear();
-            foreach(Contato contatos in listaDeResultados)
-            {
-                lbxListaDePesquisa.Items.Add("Nome: " + contatos.nome + " (" + contatos.telefone + ") ");
-            }
+         
         }
 
         //=======================================================================
@@ -65,13 +64,9 @@ namespace Projeto_agenda
 
             if (frp.cancelar) return;
 
+            lbxListaDePesquisa.Items.Clear();
             texto = frp.texto.ToUpper();
             ExecutaPesquisa();
-
-
-
-
-
 
         }
         //=======================================================================
@@ -81,7 +76,7 @@ namespace Projeto_agenda
             // adicionna a listaa de contaatos
             lbxListaDePesquisa.Items.Clear();
 
-            foreach (Contato contatos in FrPesquisar.listaDeResultados)
+            foreach (Contato contatos in listaDeResultados)
             {
                  lbxListaDePesquisa.Items.Add("Nome: " + contatos.nome + " (" + contatos.telefone + ") ");
             }
@@ -108,7 +103,33 @@ namespace Projeto_agenda
         private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrPesquisar frp = new FrPesquisar();
-            frp.Show();
+            frp.ShowDialog();
+            if (frp.cancelar) return;
+
+            lbxListaDePesquisa.Items.Clear();
+            texto = frp.texto.ToUpper();
+            ExecutaPesquisa();
+        }
+
+        //=======================================================================
+        private void ajudaaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAjuda frmAjuda = new FrmAjuda();
+            frmAjuda.Show();
+            this.Close();
+        }
+
+        //=======================================================================
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSobre frmSobre = new frmSobre();
+            frmSobre.Show();
+            this.Close();
+        }
+
+        private void lblVersao_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

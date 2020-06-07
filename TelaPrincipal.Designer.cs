@@ -54,6 +54,7 @@
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
             this.consultarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.consultarToolStripMenuItem.Text = "Sobre";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
@@ -67,10 +68,11 @@
             this.ajudaaToolStripMenuItem.Name = "ajudaaToolStripMenuItem";
             this.ajudaaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.ajudaaToolStripMenuItem.Text = "Ajuda";
+            this.ajudaaToolStripMenuItem.Click += new System.EventHandler(this.ajudaaToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.contatosToolStripMenuItem,
             this.pesquisarToolStripMenuItem,
@@ -128,9 +130,11 @@
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.monthCalendar1.Location = new System.Drawing.Point(281, 55);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
+            this.monthCalendar1.TitleBackColor = System.Drawing.Color.Red;
             // 
             // timer1
             // 
@@ -149,6 +153,7 @@
             // 
             // lbxListaDePesquisa
             // 
+            this.lbxListaDePesquisa.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lbxListaDePesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxListaDePesquisa.FormattingEnabled = true;
             this.lbxListaDePesquisa.ItemHeight = 15;
@@ -176,11 +181,13 @@
             this.lblVersao.TabIndex = 9;
             this.lblVersao.Text = "Apresentar a versão ";
             this.lblVersao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblVersao.Click += new System.EventHandler(this.lblVersao_Click);
             // 
             // frmTelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(524, 416);
             this.Controls.Add(this.lblVersao);
             this.Controls.Add(this.btnSair);
