@@ -33,6 +33,7 @@
             this.pesquisarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.contatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnInserir = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.lbxListaDePesquisa = new System.Windows.Forms.ListBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
-            this.contatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +54,6 @@
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
             this.consultarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.consultarToolStripMenuItem.Text = "Sobre";
-            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
@@ -82,6 +81,13 @@
             this.menuStrip1.Size = new System.Drawing.Size(524, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // contatosToolStripMenuItem
+            // 
+            this.contatosToolStripMenuItem.Name = "contatosToolStripMenuItem";
+            this.contatosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.contatosToolStripMenuItem.Text = "Contatos";
+            this.contatosToolStripMenuItem.Click += new System.EventHandler(this.contatosToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -171,13 +177,6 @@
             this.lblVersao.Text = "Apresentar a versão ";
             this.lblVersao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // contatosToolStripMenuItem
-            // 
-            this.contatosToolStripMenuItem.Name = "contatosToolStripMenuItem";
-            this.contatosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.contatosToolStripMenuItem.Text = "Contatos";
-            this.contatosToolStripMenuItem.Click += new System.EventHandler(this.contatosToolStripMenuItem_Click);
-            // 
             // frmTelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,9 +217,9 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lbxListaDePesquisa;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblVersao;
         private System.Windows.Forms.ToolStripMenuItem contatosToolStripMenuItem;
+        public System.Windows.Forms.ListBox lbxListaDePesquisa;
     }
 }
